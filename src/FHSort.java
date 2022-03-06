@@ -1,5 +1,16 @@
+/**
+ * Implementation of quick sort
+ */
 public class FHSort
 {
+    /**
+     * Takes the array, left and right as arguments and returns the pivot, which is also our median
+     * @param a  An array
+     * @param left  Left index
+     * @param right  Right index
+     * @param <E>  Generic object
+     * @return The pivot
+     */
     // quicksort and helpers -------------------------------------------
     // median3 sorts a[left], a[center] and a[right].
     // it leaves the smallest in a[left], the largest in a[right]
@@ -27,6 +38,11 @@ public class FHSort
 
     protected static int QS_RECURSION_LIMIT = 15;
 
+    /**
+     * Changes the recursion limit
+     * @param newLim  New recursion limit
+     * @return  Boolean that indicates whether the change was successful
+     */
     public static boolean setRecursionLimit(int newLim)
     {
         if (newLim < 2 || newLim > 1000)
@@ -35,6 +51,13 @@ public class FHSort
         return true;
     }
 
+    /**
+     * Private quicksort helper that does the sorting with recursion
+     * @param a   Array
+     * @param left   Left Index
+     * @param right   Rigt Index
+     * @param <E>   Generic object
+     */
     protected static < E extends Comparable< ? super E > >
     void quickSort(E[] a, int left, int right)
     {
@@ -72,6 +95,13 @@ public class FHSort
             insertionSort(a, left, right);
     }
 
+    /**
+     * Private insertion sort that works on sub-arrays
+     * @param a   Array
+     * @param start  Start position
+     * @param stop  End position
+     * @param <E>   Generic object
+     */
     // private insertion sort that works on sub-arrays --------------
     protected static < E extends Comparable< ? super E > >
     void insertionSort(E[] a, int start, int stop)
@@ -89,6 +119,11 @@ public class FHSort
         }
     }
 
+    /**
+     * Quicksort that is used by client
+     * @param a   Array
+     * @param <E>   Generic object
+     */
     // public quicksort
     public static < E extends Comparable< ? super E > >
     void quickSort( E[] a )
