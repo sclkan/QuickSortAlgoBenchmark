@@ -1,5 +1,5 @@
 /**
- * Implementation of quick sort
+ * Implementation of Quick Sort
  */
 public class FHSort
 {
@@ -11,7 +11,6 @@ public class FHSort
      * @param <E>  Generic object
      * @return The pivot
      */
-    // quicksort and helpers -------------------------------------------
     // median3 sorts a[left], a[center] and a[right].
     // it leaves the smallest in a[left], the largest in a[right]
     // and median (the pivot) is moved "out-of-the-way" in a[right-1].
